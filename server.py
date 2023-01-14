@@ -21,6 +21,9 @@ class ClientThread(threading.Thread):
             data = self.csocket.recv(4096)
             msg = data.decode()
             print(msg)
+            if msg = '':
+               print("Отключение")
+               break
 
 while True:
     server.listen(1)
